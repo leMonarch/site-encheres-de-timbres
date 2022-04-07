@@ -1,0 +1,43 @@
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slogan__title{
+    color: var(--color-primary-contrast);
+    font-size: var(--micro-relative-bigger-2);
+    width: 20vw;
+}
+
+.slogan__description{
+    margin: 1vw 0 1.5vw 0;
+    color: var(--color-primary);
+    font-size: var(--micro-relative-normal);
+    line-height: 1.5;
+    width: 17vw;
+}
+
+.slogan__medaille{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 18vw;
+}
+
+.slogan-medal{
+    padding: 2vw;
+    position: relative;
+    top: -3vw;
+    right: -2vw;
+    background-color: var(--color-tertiary);
+    border: 2px dashed var(--color-primary-contrast);
+    border-radius: 50%;
+}
+
+.slogan-medal:hover{
+    background-color: #fff;
+    color: var(--color-primary);
+    border: 2px dotted var(--color-secondary);
+}

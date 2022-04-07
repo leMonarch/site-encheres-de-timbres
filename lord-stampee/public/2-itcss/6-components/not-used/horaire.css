@@ -1,0 +1,62 @@
+ /*------------------------------------*\
+  horaire / components
+\*------------------------------------*/
+
+.horaire{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2vw;
+    width: 35%;
+  }
+  
+  .horaire__text{
+    font-size: 2vw;
+    text-align: center;
+  }
+  
+  .horaire__text:hover{
+    color: var(--color-secondary);
+  }
+  
+  .horaire__small-text{
+    font-size: 1.75vw;
+    text-align: center;
+  }
+  
+  .horaire__small-text:hover{
+    color: var(--color-secondary);
+  }
+  
+  @media only screen and (min-width: 550px) {
+  
+    .horaire{
+      margin-top: 2vw;
+    }
+    
+    .horaire__text{
+        font-size: 2vw;
+      }  
+  
+      .horaire__small-text{
+        font-size: 1.5vw;
+      }
+       
+  }
+  
+  @media only screen and (min-width: 1024px) {
+     
+    .horaire{
+      margin-top: 0vw;
+    } 
+  
+    .horaire__text{
+      font-size: 1.2vw;
+    }  
+  
+    .horaire__small-text{
+      font-size: 0.9vw;
+    }
+  
+  }
+  

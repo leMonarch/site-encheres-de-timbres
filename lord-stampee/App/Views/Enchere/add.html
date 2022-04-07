@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block div %}	
+		
+		<section class="section-fiche">
+			<form method="post" enctype="multipart/form-data" class="votre-fiche">
+				<div class="section-title-fiche">
+					<h2>Entrer votre enchere</h2> <h3>{{ remplirsvp }}</h3>
+				</div>
+				<div class="timbre__infos">
+					<div class="fiche-timbre__infos__img-wrapper">
+						<h4>Titre:<input type="text"  style="width: 20vw;" name="timbre_nom" value="{{ timbre.timbre_nom }}"><br><span>{{ message.timbre_nom }}</span></h4>
+						<div class="line">
+							<div class="timbre__infos__desc-line">
+							</div>
+						</div>
+						
+						<div class="fiche-timbre-img">
+							<div class="fiche-img-wrapper">
+								<input name="image_lien" type="file">
+							</div>
+							<div>
+								<span>{{ message.timbre_format }} {{ message.image_lien }}</span>
+							</div>
+						</div>
+					
+						<div class="timbre__infos__date">
+							<div class="timbre__infos__date-wrapper">
+								<p class="fiche-timbre__infos__date-debut-fin"><span>Debut: <input type="date"  style="width: 10vw;" name="enchere_date_debut" value="{{ "now"|date("Y-m-d") }}"></span><span>{{ message.date_debut }}</span> </p>
+								<p class="fiche-timbre__infos__date-debut-fin"><span>Fin: <input type="date"  style="width: 10vw;" name="enchere_date_fin" value="{{ "now"|date("Y-m-d") }}"></span><span>{{ message.date_fin }}</span></p>
+							</div>
+						</div>
+						<div class="timbre__infos__count-down-container">
+							<div class="timbre__infos__count-down-wrapper">
+								<div class="fiche-timbre__infos__count-down-title">
+									<p>Temps Restant</p>
+								</div>
+								<div class="line">
+									<div class="timbre__infos__count-down-line">
+									</div>
+								</div>
+								
+								<div class="timbre__infos__count-down-chrono">
+									<p class="fiche-timbre__chrono"><span>Compte à rebour selon les dates</span></p>
+								</div>
+								<div class="timbre__infos__mise-actuelle">
+									<div class="timbre__infos__mise-actuelle-wrapper">
+										<p class="fiche-timbre__infos__mise-actuelle-depart"><span>Mise de départ: <input type="text"  style="width: 10vw;" name="enchere_prix_plancher" min="1" value="{{ timbre.enchere_prix_plancher }}"></span><br><span>{{ message.prix_plancher }}</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fiche-timbre__infos-desc">
+						<div class="fiche-timbre">
+							<div class="fiche-timbre-carac">
+								<div class="fiche-timbre-carac__colonne-gauche">
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Provenance: </p>
+											<p><select style="width: 8vw;" name="Pays_pays_id">
+												{% for pays in oPays %}
+												<option value="{{ pays.pays_id }}" {{ timbre.Pays_pays_id == pays.pays_id ? 'selected' : '' }}>{{ pays.pays_nom }}</option>
+												{% endfor %}
+											</select>
+											</p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Conditions: </p>
+											<p>
+												<select style="width: 8vw;" name="Conditions_condition_id">
+													{% for condition in conditions %}
+													<option  value="{{ condition.condition_id }}" {{ timbre.Conditions_condition_id == condition.condition_id ? 'selected' : '' }}>{{ condition.condition_nom }}</option>
+													{% endfor %}
+												</select>
+											</p>
+											
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Année </p>
+											<input style="width: 8vw;" name="timbre_annee" type="number" value="{{ timbre.timbre_annee }}">
+											   <br><span>{{ message.timbre_annee }}</span></p>
+										</div>
+									
+									</div>
+	
+								</div>
+								<div class="fiche-timbre-carac__colonne-droite">
+	
+									<div class="fiche-timbre-carac__container">
+									
+										<div class="carac">
+											<p class="carac__name">Type: </p>
+											<p class="carac__desc"><span><input type="text"  style="width: 10vw;" name="timbre_type" value="{{ timbre.timbre_type }}"></span> <br> <span>{{ message.timbre_type }}</span></p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										
+										<div class="carac">
+											<p class="carac__name">Dimension:</p>
+											<p class="carac__desc"><span><input type="text"  style="width: 10vw;" name="timbre_dimensions" value="{{ timbre.timbre_dimensions }}"></span> <br>  <span>{{ message.timbre_dimension }}</span></p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										
+										<div class="carac">
+											<p class="carac__name">Couleur: </p>
+											<p class="carac__desc"><span><input type="text"  style="width: 10vw;" name="timbre_couleur" value="{{ timbre.timbre_couleur }}"></span> <br>  <span>{{ message.timbre_couleur }}</span></p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="fiche-timbre-carac__container">
+								<div class="carac">
+									<p class="carac__name">Certification: </p>
+									<p>
+										<select style="width: 8vw;" name="Certifications_certification_id">
+											{% for certification in certifications %}
+												<option  value="{{ certification.certification_id }}" {{ timbre.Certifications_certification_id == certification.certification_id ? 'selected' : '' }}>{{ certification.certification_nom }}</option>
+											{% endfor %}
+										</select>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="fiche-timbre-img__title-container">
+							<p class="fiche-timbre-img__desc-title">Description</p>
+						</div>
+						<div class="fiche-line">
+							<div class="fiche-timbre__infos__desc-line"></div>
+						</div>
+						<div class="fiche-timbre-img">
+							
+							<!-- <div class="fiche-bloc-wrapper"> -->
+										<p class="fiche-mise__desc"><span><input type="text"  style="width: 40vw; height: 5vw;" name="timbre_description" value="{{ timbre.timbre_description }}" style="width: 40vw; height: 5vw;"></span><br><span>{{ message.timbre_description }}</span>
+										</p>
+							<!-- </div> -->
+						</div>
+					</div>	
+					
+				</div>
+				<div class="btns-inputs">
+					<div>
+						<input type="submit" value="Mettre aux enchères">
+					</div>
+				</div>
+				<input type="hidden" name="timbre_id" value="{{ timbre.timbre_id }}">
+				<input type="hidden" name="Timbres_Pays_pays_id">
+				<input type="hidden" name="Timbres_Conditions_condition_id">
+				<input type="hidden" name="Timbres_Certifications_certification_id">
+				<input type="hidden" name="Encheres_enchere_id">
+			</form>
+		</section>
+
+{% endblock %}

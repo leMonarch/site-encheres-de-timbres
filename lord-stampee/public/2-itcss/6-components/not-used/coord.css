@@ -1,0 +1,35 @@
+/*------------------------------------*\
+  coord / components
+\*------------------------------------*/
+
+.coord{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 23%;
+  }
+  
+
+  
+    .coord__inc{
+      font-family: var(--font-primary);
+      font-size: 0.5vw;
+      letter-spacing: 0.1vw;
+    }
+  
+    .coord__nom-du-lord{
+      font-weight: 520;
+      font-family: var(--font-secondary);
+      line-height: 2.65vw;
+      font-size: 2vw;
+    }
+    
+    .coord__details{
+        font-size: 0.6vw;
+      }  
+    .coord__text-address{
+      font-size: 0.9vw;
+      line-height: 1.15vw;
+    }
+  
+  

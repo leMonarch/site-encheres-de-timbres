@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  color / settings
+\*------------------------------------*/
+
+
+:root {
+  --color-primary: #022F53;
+  --color-primary-contrast: #D90429;
+  --color-secondary: #BDAA70;
+  --color-tertiary: #F4F9F6;
+}

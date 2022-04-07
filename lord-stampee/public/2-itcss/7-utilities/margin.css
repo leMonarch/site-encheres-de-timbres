@@ -1,0 +1,70 @@
+/*margin*/
+.margin--0-0-1-0{
+    margin: 0 0 1vw 0;
+}
+
+.margin--6-0{
+    margin: 6vw 0;
+}
+
+.margin--4-0{
+    margin: 4vw 0;
+}
+
+.margin--2-0{
+    margin: 2vw 0;
+}
+
+.margin--1-0{
+    margin: 1vw 0;
+}
+
+.margin--1pt35-0{
+    margin: 1.35vw 0;
+}
+
+.margin--0-2{
+    margin: 0 2vw;
+}
+
+.margin--0-0-0-2{
+    margin: 0 0 0 2vw;
+}
+
+.margin--0-2-0-0{
+    margin: 0 2vw 0 0;
+}
+
+.margin--2-0-0-0{
+    margin: 2vw 0 0 0;
+}
+
+.margin--2-0-0-2{
+    margin: 2vw 0 0 2vw;
+}
+
+.margin--pt5-0-2pt5-0{
+    margin: 0.5vw 0 2.5vw 0;
+}
+
+/*Distancer les section*******************************************/
+
+.margin--5-0-0-0{
+    margin-top: var(--vw-5);
+}
+
+.margin--1-0-0-0{
+    margin-top: var(--vw-1);
+}
+
+.margin--8-0-0-0{
+    margin-top: 8vw;
+}
+
+.margin--12-0-0-0{
+    margin-top: 12vw;
+}
+
+.margin--calc--main{
+    margin-top: 6vw;
+}

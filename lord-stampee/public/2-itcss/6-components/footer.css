@@ -1,0 +1,33 @@
+/*------------------------------------*\
+  footer / components
+\*------------------------------------*/
+
+.footer{
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    min-height: 14em;
+    padding: 1em 3em 1em 3em;
+}
+
+/* @media only screen and (min-width: 768px) {
+
+  .footer{
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding: 1em 3em;
+    margin-top: 1em;
+}
+
+} */

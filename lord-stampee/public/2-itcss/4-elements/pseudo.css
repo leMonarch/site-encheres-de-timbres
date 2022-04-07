@@ -1,0 +1,61 @@
+/*Les pseudos éléments*/
+/* .bloc--img::before {
+    content: "";
+    background-color: var(--grey);
+    height: 1px;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    width: 50%;
+    z-index: 0;
+}
+
+.bloc--img::after {
+    content: "";
+    background-color: var(--grey);
+    height: 1px;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg)  translateY(-50%);
+    width: 50%;
+    z-index: 0;
+}
+
+.bloc--video::before {
+    content: "";
+    border-top: 4vw solid transparent;
+    border-bottom: 4vw solid transparent;
+    border-right: 4vw solid transparent;
+    border-left: 6vw solid var(--dark-grey);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.bloc--img-back::before {
+    content: "";
+    background-color: var(--grey);
+    height: 1px;
+    left: 37.5%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    width: 20%;
+    z-index: 0;
+}
+
+.bloc--img-back::after {
+    content: "";
+    background-color: var(--grey);
+    height: 1px;
+    left: 37.5%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg)  translateY(-50%);
+    width: 20%;
+    z-index: 0;
+} */

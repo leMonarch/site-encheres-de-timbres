@@ -1,0 +1,44 @@
+
+.philo{
+    display: none;
+}
+
+@media only screen and (min-width: 1500px) {
+    .philo{
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: var(--micro-relative-bigger) 0 0 var(--micro-relative-bigger);
+        padding: var(--micro-relative-normal) var(--micro-relative-bigger) var(--micro-relative-small) var(--micro-relative-bigger);
+        width: 30vw;
+    }
+}
+
+.philo-text{
+    color: var(--color-primary);
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--micro-relative-normal);
+    font-weight: bolder;
+}
+
+.fa-quote-left{
+    color: var(--color-primary);
+    position: relative;
+    margin-bottom: var(--micro-relative-normal);
+}
+
+.fa-quote-right{
+    color: var(--color-primary);
+    position: relative;
+    margin-top: var(--micro-relative-normal);
+}
+
+.philo-signature-wrapper{
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--micro-relative-normal);
+    justify-content: flex-end;
+}

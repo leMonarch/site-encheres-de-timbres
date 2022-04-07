@@ -1,0 +1,9 @@
+/*------------------------------------*\
+  link / elements
+\*------------------------------------*/
+
+
+a {
+    font-family: var(--font-primary);
+    text-decoration: none;
+}

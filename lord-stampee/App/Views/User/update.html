@@ -1,0 +1,454 @@
+{% extends 'base.html' %}
+{% block div %}	
+		<section class="section-lord-certification">
+			<div class="certification">
+				<div class="truck-delivery">
+					<div class="truck">
+						<div class="truck-img-wrapper">
+							<i class="fas fa-truck"></i>
+						</div>
+						
+					</div>
+					<div class="truck-title-wrapper">
+						<h3 class="truck-title">
+							Livraison internationale
+						</h3>
+					</div>
+				</div>
+				<div class="medaille-satisfaction">
+					<div class="medaille">
+						<div class="medaille-img-wrapper">
+							<i class="fas fa-medal"></i>
+						</div>
+						
+					</div>
+					<div class="medaille-title-wrapper">
+						<h3 class="medaille-title">
+							Satisfaction garantie
+						</h3>
+					</div>
+				</div>
+				<div class="bouclier-securite">
+					<div class="badge">
+						<div class="badge-img-wrapper">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						
+					</div>
+					<div class="badge-title-wrapper">
+						<h3 class="badge-title">
+							Sécurité des paiements
+						</h3>
+					</div>
+				</div>
+				
+			</div>
+
+
+		</section>
+
+		<section class="section-1-remplace">
+			<div class="carousel-container">
+				<img class="carousel-img" src="/lord-stampee/public/img/manylords.jpg" alt="">
+				<div class="carousel-title">L'histoire de la qualité</div>
+			</div>
+			<div class="certification">
+				<div class="truck-delivery">
+					<div class="truck">
+						<div class="truck-img-wrapper">
+							<i class="fas fa-truck"></i>
+						</div>
+						
+					</div>
+					<div class="truck-title-wrapper">
+						<h3 class="truck-title">
+							Livraison internationale
+						</h3>
+					</div>
+				</div>
+				<div class="medaille-satisfaction">
+					<div class="medaille">
+						<div class="medaille-img-wrapper">
+							<i class="fas fa-medal"></i>
+						</div>
+						
+					</div>
+					<div class="medaille-title-wrapper">
+						<h3 class="medaille-title">
+							Satisfaction garantie
+						</h3>
+					</div>
+				</div>
+				<div class="bouclier-securite">
+					<div class="badge">
+						<div class="badge-img-wrapper">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						
+					</div>
+					<div class="badge-title-wrapper">
+						<h3 class="badge-title">
+							Sécurité des paiements
+						</h3>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<div style="margin:auto;">
+			<h2>{{ message }}</h2>
+		</div>
+		<section class="section-accueil">
+			<aside class="space-filter-accueil">
+				<div class="space-filter__container">
+
+					<div class="slogan">
+					
+						<div class="slogan__title">
+							<h1>Droits d'un membre</h1>
+                            <form novalidate method="post" action="">
+                                <div>
+                                    <label for="user_email">Entrer le courriel du membre:</label>
+                                    <input id="user_email" type="email" name="user_email">
+                                </div>
+                                <select style="width: 8vw;" name="status_id">
+									{% for status in allstatus %}
+										{% if status.status_id == 1 %}
+										<option  value="{{ status.status_id}}" {{ user.Certifications_certification_id == status.status_id ? 'selected' : '' }}>Choisir</option>
+										{% else %}
+										<option  value="{{ status.status_id}}" {{ user.Certifications_certification_id == status.status_id ? 'selected' : '' }}>{{ status.status_nom }}</option>
+										{% endif %}
+									{% endfor %}
+								</select>
+                                <div><input type="submit" value="Attribuer"></div>
+                            </form>
+						</div>
+					</div>
+				</div>
+				
+			</aside>
+			<div class="carousel-container">
+				<img class="carousel-img" src="/lord-stampee/public/img/manylords.jpg" alt="">
+				<div class="carousel-title">L'histoire de la qualité</div>
+			</div>
+
+				
+		</section>		
+		<main>
+			<div class="grille grid" data-js-swap>
+				
+				<!--Tuile-->
+				<article class="timbre">
+					<div class="timbre__infos">
+						<div class="timbre__infos__img-wrapper">
+							<a href="./fiche.html"><img class="timbre__infos__img" src="/lord-stampee/public/img/timbre3.png" alt=""></a>
+							<div class="timbre__infos__date">
+								<div class="timbre__infos__date-wrapper">
+									<p class="timbre__infos__date-debut-fin">Début: 2020-10-12</p>
+									<p class="timbre__infos__date-debut-fin">Fin: 2020-11-20</p>
+								</div>
+							</div>
+							<div class="timbre__infos__count-down-container">
+								<div class="timbre__infos__count-down-wrapper">
+									<div class="timbre__infos__count-down-title">
+										<p>Temps Restant</p>
+									</div>
+									<div class="line">
+										<div class="timbre__infos__count-down-line">
+										</div>
+									</div>
+									
+									<div class="timbre__infos__count-down-chrono">
+										<p class="timbre__chrono">25j 12:00:58</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="timbre__infos-desc">
+							<h4>Hindenburg First North America Flight Recovered Mail, posted Netherlands to Wooster, Ohio</h4>
+							<div class="line">
+								<div class="timbre__infos__desc-line">
+								</div>
+							</div>
+							<p class="timbre__infos-intro">large remnant of cover franked by 12½c Boy Scout Jamboree (#208), tied by Rotterdam-Waalhaven c.d.s. dated 1.V.1937, addressed to G.</p>
+							<details>
+								<summary>Voir plus</summary>
+								<p> Thoolen care of Mr. Donald E. Dickason; typical charring and damage, but lower left corner of stamp, near-complete postmark and flight cachet, and address fully present and legibl</p>
+							</details>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Départ: 1000 $</p>
+									<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >1200 $</span></p>
+								</div>
+							</div>
+							<div class="timbre__mise">
+								<div class="timbre__mise-input-wrapper">
+									<input class="timbre__mise-input" type="text" placeholder="Placer votre mise">
+								</div>
+								<div class="timbre__btn-miser-container">
+									<div class="timbre__btn-miser-wrapper">
+									
+										<div class="timbre__btn-miser">
+											<p class="timbre__btn-miser-text">
+												Miser
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+						</div>	
+					</div>
+
+					
+				</article>
+
+				<!--Tuile-->
+				<article class="timbre">
+					<div class="timbre__infos">
+						<div class="timbre__infos__img-wrapper">
+							<img class="timbre__infos__img" src="/lord-stampee/public/img/timbre2.png" alt="">
+							<div class="timbre__infos__date">
+								<div class="timbre__infos__date-wrapper">
+									<p class="timbre__infos__date-debut-fin">Début: 2020-10-12</p>
+									<p class="timbre__infos__date-debut-fin">Fin: 2020-11-20</p>
+								</div>
+							</div>
+							<div class="timbre__infos__count-down-container">
+								<div class="timbre__infos__count-down-wrapper">
+									<div class="timbre__infos__count-down-title">
+										<p>Temps Restant</p>
+									</div>
+									<div class="line">
+										<div class="timbre__infos__count-down-line">
+										</div>
+									</div>
+									
+									<div class="timbre__infos__count-down-chrono">
+										<p class="timbre__chrono">25j 12:00:58</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="timbre__infos-desc">
+							<h4>Hindenburg First North America Flight Recovered Mail, posted Netherlands to Wooster, Ohio</h4>
+							<div class="line">
+								<div class="timbre__infos__desc-line">
+								</div>
+							</div>
+							<p class="timbre__infos-intro">large remnant of cover franked by 12½c Boy Scout Jamboree (#208), tied by Rotterdam-Waalhaven c.d.s. dated 1.V.1937, addressed to G.</p>
+							<details>
+								<summary>Voir plus</summary>
+								<p> Thoolen care of Mr. Donald E. Dickason; typical charring and damage, but lower left corner of stamp, near-complete postmark and flight cachet, and address fully present and legibl</p>
+							</details>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Départ: 1000 $</p>
+									<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >1200 $</span></p>
+								</div>
+							</div>
+							<div class="timbre__mise">
+								<div class="timbre__mise-input-wrapper">
+									<input class="timbre__mise-input" type="text" placeholder="Placer votre mise">
+								</div>
+								<div class="timbre__btn-miser-container">
+									<div class="timbre__btn-miser-wrapper">
+									
+										<div class="timbre__btn-miser">
+											<p class="timbre__btn-miser-text">
+												Miser
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+						</div>	
+					</div>
+
+					
+				</article>
+
+
+
+				<article class="timbre">
+					<div class="timbre__infos">
+						<div class="timbre__infos__img-wrapper">
+							<img class="timbre__infos__img" src="/lord-stampee/public/img/tile__infos-picture.png" alt="">
+							<div class="timbre__infos__date">
+								<div class="timbre__infos__date-wrapper">
+									<p class="timbre__infos__date-debut-fin">Début: 2020-10-12</p>
+									<p class="timbre__infos__date-debut-fin">Fin: 2020-11-20</p>
+								</div>
+							</div>
+							<div class="timbre__infos__count-down-container">
+								<div class="timbre__infos__count-down-wrapper">
+									<div class="timbre__infos__count-down-title">
+										<p>Temps Restant</p>
+									</div>
+									<div class="line">
+										<div class="timbre__infos__count-down-line">
+										</div>
+									</div>
+									
+									<div class="timbre__infos__count-down-chrono">
+										<p class="timbre__chrono">25j 12:00:58</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="timbre__infos-desc">
+							<h4>Hindenburg First North America Flight Recovered Mail, posted Netherlands to Wooster, Ohio</h4>
+							<div class="line">
+								<div class="timbre__infos__desc-line">
+								</div>
+							</div>
+							<p class="timbre__infos-intro">large remnant of cover franked by 12½c Boy Scout Jamboree (#208), tied by Rotterdam-Waalhaven c.d.s. dated 1.V.1937, addressed to G.</p>
+							<details>
+								<summary>Voir plus</summary>
+								<p> Thoolen care of Mr. Donald E. Dickason; typical charring and damage, but lower left corner of stamp, near-complete postmark and flight cachet, and address fully present and legibl</p>
+							</details>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Départ: 1000 $</p>
+									<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >1200 $</span></p>
+								</div>
+							</div>
+							<div class="timbre__mise">
+								<div class="timbre__mise-input-wrapper">
+									<input class="timbre__mise-input" type="text" placeholder="Placer votre mise">
+								</div>
+								<div class="timbre__btn-miser-container">
+									<div class="timbre__btn-miser-wrapper">
+									
+										<div class="timbre__btn-miser">
+											<p class="timbre__btn-miser-text">
+												Miser
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+						</div>	
+					</div>
+
+					
+				</article>
+
+
+
+
+				<article class="timbre">
+					<div class="timbre__infos">
+						<div class="timbre__infos__img-wrapper">
+							<img class="timbre__infos__img" src="/lord-stampee/public/img/timbre4.jpg" alt="">
+							<div class="timbre__infos__date">
+								<div class="timbre__infos__date-wrapper">
+									<p class="timbre__infos__date-debut-fin">Début: 2020-10-12</p>
+									<p class="timbre__infos__date-debut-fin">Fin: 2020-11-20</p>
+								</div>
+							</div>
+							<div class="timbre__infos__count-down-container">
+								<div class="timbre__infos__count-down-wrapper">
+									<div class="timbre__infos__count-down-title">
+										<p>Temps Restant</p>
+									</div>
+									<div class="line">
+										<div class="timbre__infos__count-down-line">
+										</div>
+									</div>
+									
+									<div class="timbre__infos__count-down-chrono">
+										<p class="timbre__chrono">25j 12:00:58</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="timbre__infos-desc">
+							<h4>Hindenburg First North America Flight Recovered Mail, posted Netherlands to Wooster, Ohio</h4>
+							<div class="line">
+								<div class="timbre__infos__desc-line">
+								</div>
+							</div>
+							<p class="timbre__infos-intro">large remnant of cover franked by 12½c Boy Scout Jamboree (#208), tied by Rotterdam-Waalhaven c.d.s. dated 1.V.1937, addressed to G.</p>
+							<details>
+								<summary>Voir plus</summary>
+								<p> Thoolen care of Mr. Donald E. Dickason; typical charring and damage, but lower left corner of stamp, near-complete postmark and flight cachet, and address fully present and legibl</p>
+							</details>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Départ: 1000 $</p>
+									<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >1200 $</span></p>
+								</div>
+							</div>
+							<div class="timbre__mise">
+								<div class="timbre__mise-input-wrapper">
+									<input class="timbre__mise-input" type="text" placeholder="Placer votre mise">
+								</div>
+								<div class="timbre__btn-miser-container">
+									<div class="timbre__btn-miser-wrapper">
+									
+										<div class="timbre__btn-miser">
+											<p class="timbre__btn-miser-text">
+												Miser
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+						</div>	
+					</div>
+
+					
+				</article>
+
+
+
+				
+			</div>
+		</main>
+		<section class="section-bio">
+			<div class="lord">
+				<div class="lord-img-wrapper">
+					<img class="lord-img" src="/lord-stampee/public/img/lord.png" alt="">
+				</div>
+				<div class="philo">
+					<div class="philo-text-wrapper">
+						<p class="">
+							Vous trouverez la qualité que vous recherchez. Nous avons à coeur 
+							l'authenticité et l'approche minutieuse de nos fournisseurs. 
+							Nous sommes le seul intermédiaire entre vous et la qualité.
+						</p> 
+					</div>
+					<div class="philo-signature-wrapper">
+						<div class="philo-signature">
+							Lord Stampee
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bio__title">Bio de Lord Stampee</div>
+			<div class="bio__description">
+				&nbsp;&nbsp;&nbsp;&nbsp; Lord Byron Stampee, 6e baron Stampee, généralement appelé Lord Stampee, est un philatéliste britannique, 
+				né le 22 janvier 1947 à Londres, en Espagne, alors sous domination allemande. 
+				Il est l'un des plus illustres poètes de l'histoire de la philatélie anglaise. Bien que classique par le goût, il représente l'une des grandes 
+				figures des détenteurs de collection de timbre anglaise, avec William Blake, William Wordsworth, Samuel Taylor Coleridge, Percy Bysshe Shelley et John Keats.
+Il se voulait orateur à la Chambre des lords, mais ce sont ses enchères qui le rendirent célèbre : 
+Hours of Idleness, et surtout Childe Harold, inspiré par son voyage en Orient, propageant le modèle du philatéliste romantique, 
+dont le retentissant succès en 1967 le surprendra lui-même. Il s’illustre par la suite dans divers genres de collections. 
+Ainsi que dans des œuvres courtes, comptant parmi ses plus connues, par exemple She walks in beauty, When we two parted et So, we'll go no more a roving, 
+Chacune d'elles chantant un moment de nostalgie personnelle. Il doit quitter l’Angleterre en 2019 à cause de la pandémie mondiale d'origine cino-bactérienne et
+en raison du scandale public causé par l'échec de la vaccination le compromettant avec les médias. Il donne libre cours au sarcasme,
+ à son génie de la rime et de l'improvisation, avec Beppo et son œuvre maîtresse, sa plateforme d'enchères Lord Stampee.
+			</div>
+		</section>
+		
+	
+{% endblock %}
+

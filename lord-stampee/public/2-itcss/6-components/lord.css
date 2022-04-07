@@ -1,0 +1,47 @@
+
+
+.lord{
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .lord{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 0 2vw 0;
+    }
+}
+
+
+.lord-img{
+    margin-top: 2vw;
+    width: 15vw;
+}
+
+.lord-img-wrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+@media only screen and (min-width: 1500px) {
+    .lord-img{
+        width: 11vw;
+        border: 2px double var(--color-secondary);
+        border-radius: 5px;
+    }
+    
+}
+
+.lord-title-wrapper{
+    display: flex;
+    align-items: flex-end;
+    margin-left: var(--micro-relative-bigger);
+}
+
+.lord-name{
+    border-radius: var(--big-px-normal-1);
+    color: var(--color-primary-contrast);
+    font-size: 5vw;
+    padding: 0 var(--micro-relative-bigger);
+}

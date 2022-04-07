@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block head %}
+	<meta charset="UTF-8">
+	<title>{% block title %}  Bienvenue | Lord Stampee {% endblock %}</title>
+	<meta name="description" content="TP2_LouisEtienneLemire 1224194 Gr20626 du cours 582-21W-MA Création et design de site Web : UI Vedge resto">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- styles -->
+    <script src="https://kit.fontawesome.com/aa52c6624b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Neonderthaw&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+	<link rel="stylesheet" href="/lord-stampee/public/2-itcss/styles.css">
+	<script type="module" src="/lord-stampee/public/js/main.js" defer></script>
+	{% endblock %}
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<div class="logo__link">
+				<a href="/lord-stampee/public/Home/index"><img class="logo__link-img" src="/lord-stampee/public/img/output-onlinepngtools.png"></a>
+			</div>
+			<div class="coord-inc-wrapper">
+				<div class="coord__details">
+					<p class="coord__inc-entete">GESTION LORD STAMPEE STAMPS INC.</p>
+					<p class="coord__nom-du-lord-entete">Lord Stampee</p>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav__icons">
+				<ul class="nav__icons-list" >
+					<li class="nav__icons-item under-1024-nav">
+						<form method="post" action="recherche">
+							<input class="space-filter__btn-input-text" name="keyword" type="text" value="" placeholder="mot-clé"><button type="submit"><i class="fas fa-search"></i></button>
+						</form>
+					</li>
+					<li class="nav__icons-item under-1024-nav">
+						<div>
+							<a class="nav__icons-link" href="./fiche.html"><i class="fas fa-user"></i></a>
+						</div>
+					</li>
+					<li class="nav__icons-item under-1024-nav">
+						<div>
+							<a class="nav__icons-link" href="./portail.html">Fr | En</a>
+						</div>
+					</li>
+					<li class="nav__icons-item show-menu">
+						<input type="checkbox">
+						<div>
+							<a href="#">Enchères</a>
+							<a href="#">Catalogues</a>
+							<a href="#">Archives</a>
+							<a href="#">Fr | En</a>
+							<a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+						</div>
+					</li>
+					{% if not current_user %}
+					
+					<li class="nav__icons-item">
+						<div>
+							<a class="nav__icons-link" href="/lord-stampee/public/User/add">S'inscrire</a>
+						</div>
+					</li>
+					<li class="nav__icons-item">
+						<div>
+							<a class="nav__icons-link" href="/lord-stampee/public/User/connect">Connexion</a>
+						</div>
+					</li>
+					{% else %}
+					<li class="nav__icons-item">
+						<div>
+							<a class="nav__icons-link" href="/lord-stampee/public/User/deconnect">Session de {{ firstname }} {{ lastname }} <i class="fas fa-sign-out-alt"></i></a>
+						</div>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+			<ul class="nav__list">
+				{% if current_user %}
+				<li class="nav__item lien-qui-drop">
+					{% if current_user.user_status != 3 %}
+					<div class="nav__item-link-wrapper">
+						<a class="nav__item-link" href="/lord-stampee/public/Home/catalogue">Editer</a>
+					</div>
+					{% else %}
+						<li class="nav__item">
+							<div class="nav__item-link-wrapper">
+								<a class="nav__item-link" href="/lord-stampee/public/">Votre compte est suspendu...</a>
+							</div>
+						</li>
+					{% endif %}
+					<ul class="lien-qui-drop-content">
+					
+						{% if current_user.user_status == 1 %}
+						<li class="nav__item-content">
+							<div class="nav__item-link-wrapper-content">
+								<a class="nav__item-link enchere-active" href="/lord-stampee/public/User/status">Droits</a>
+							</div>
+						</li>
+						{% endif %}
+						{% if current_user.user_status != 3 %}
+						<li class="nav__item-content">
+							<div class="nav__item-link-wrapper-content">
+								<a class="nav__item-link enchere-active" href="/lord-stampee/public/Enchere/add">Ajouter</a>
+							</div>
+						</li>
+						<li class="nav__item-content">
+							<div class="nav__item-link-wrapper-content">
+								<a class="nav__item-link enchere-active" href="/lord-stampee/public/Enchere/delete">Supprimer</a>
+							</div>
+						</li>
+						<li class="nav__item-content">
+							<div class="nav__item-link-wrapper-content">
+								<a class="nav__item-link enchere-active" href="/lord-stampee/public/Enchere/update">Modifier</a>
+							</div>
+						</li>
+						{% endif %}
+					</ul>
+					{% endif %}
+				</li>
+				
+				<li class="nav__item">
+					<div class="nav__item-link-wrapper">
+						<a class="nav__item-link" href="/lord-stampee/public/Home/catalogue">Enchères</a>
+					</div>
+				</li>
+				<li class="nav__item">
+					<div class="nav__item-link-wrapper">
+						<a class="nav__item-link" href="">Archives</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</header>
+
+	
+	<div class="wrapper">
+    {% block div %}
+    {% endblock %}
+	</div>
+	
+	
+	<footer class="section-footer">
+		<!-- <div class="wrapper"> -->
+			
+			<div class="footer">
+				<div class="coord">
+					<div class="logo-footer">
+						<div class="logo-footer__link">
+							<a href="#"><img class="logo-footer__link-img" src="/lord-stampee/public/img/output-onlinepngtools.png"></a>
+						</div>
+					</div>
+					<div class="coord__details">
+						<p class="coord__inc">GESTION LORD STAMPEE STAMPS INC.</p>
+						<p class="coord__nom-du-lord">Lord Stampee</p>
+						<p class="coord__text-address">1888 Windsor St,<br>Londres, Royaume-Unis<br>EC2R 8AH<br>tel: 020 3461 4878
+						<br>email: lstampeestamps@sl.uk</p>
+					</div>
+					
+				</div>
+				<div class="social-icon-768">
+					<ul class="social__list">
+						<i class="social__text fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+						
+						<i class="social__text fa fa-twitter fa-2x" aria-hidden="true"></i>
+						
+						<i class="social__text fa fa-instagram fa-2x" aria-hidden="true"></i>
+					</ul>
+				</div>
+				<div class="social">   
+					<div class="contact">
+						<h2 class="contact-title">Contactez-nous</h2>
+						<ul class="contact-list">
+							<li class="contact-list__item"><div class="contact-bullet"></div> Angleterre</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> Canada</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> US</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> Australie</li>
+						</ul>
+					</div> 
+					<div class="contact">
+						<h2 class="contact-title">&nbsp;</h2>
+						<ul class="contact-list">
+							<li class="contact-list__item"><div class="contact-bullet"></div> Actualités</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> Contact</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> À propos du Lord</li>
+							<li class="contact-list__item"><div class="contact-bullet"></div> FAQ</li>
+						</ul>
+						
+					</div> 
+					<div class="social-icon">
+						<ul class="social__list">
+							<i class="social__text fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+							
+							<i class="social__text fa fa-twitter fa-2x" aria-hidden="true"></i>
+							
+							<i class="social__text fa fa-instagram fa-2x" aria-hidden="true"></i>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		<!-- </div> -->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/*space-filter*/
+
+.space-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .swap-btns{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    min-width: 11em;
+    justify-content: space-evenly;
+  
+  }
+  
+  .grid-btn{
+    color: var(--color-secondary);
+    font-size: 1.7em;
+  }
+  
+  .grid-btn-inactif{
+    color: var(--color-tertiary);
+    font-size: 1.7em;
+  }
+  
+  .list-btn{
+    color: var(--color-secondary);
+    font-size: 1.7em;
+  }
+  
+  .list-btn-inactif{
+    color: var(--color-tertiary);
+    font-size: 1.7em;
+  }
+
+
+  .filter__range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: var(--color-secondary);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .filter__range:hover {
+    opacity: 1;
+  }
+  
+  .filter__range::-webkit-slider-thumb {
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--color-primary-contrast);
+    cursor: pointer;
+  }
+  
+  .filter__range::-moz-range-thumb {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary-contrast);
+    cursor: pointer;
+  }
+
+  .space-filter-1370 {
+    display:none;
+    /* flex-grow: 1;
+      flex-grow: 1.5;
+      min-width: 12em;
+      flex-shrink: 1;
+      position: sticky;
+      top: 10vw;
+      align-self: flex-start;
+      padding: 2em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-primary);
+      border: 2px solid var(--color-secondary);
+      justify-content: flex-start;
+      max-width: 25.5em;
+      margin: 0 2em 0 0; */
+  }
+
+  .space-filter {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 1370px) {
+
+    .space-filter {
+      flex-grow: 1;
+      flex-grow: 1.5;
+      min-width: 12em;
+      flex-shrink: 1;
+      position: sticky;
+      top: 10vw;
+      align-self: flex-start;
+      padding: 2em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-tertiary);
+      border-top: 2px solid var(--color-secondary);
+      border-left: 2px solid var(--color-secondary);
+      justify-content: flex-start;
+      max-width: 15.5em;
+      margin: 0 2em 0 0;
+    }
+
+    .space-filter__container > * + * {
+      margin-bottom: 0.5vw;
+    }
+    
+
+  }
+  .space-filter-accueil{
+    display: none;
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .space-filter-accueil{
+      display: flex;
+      flex-direction: column;
+      min-width: 24vw;
+    }
+  }
+
+  
+  .space-filter__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 22em;
+  }
+  
+  .space-filter__entete{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .coord__inc-entete{
+    color: var(--color-secondary);
+      font-family: var(--font-primary);
+      font-size: 0.5vw;
+      letter-spacing: 0.1vw;
+    }
+  
+    .coord__nom-du-lord-entete{
+    color: var(--color-tertiary);
+      font-weight: 520;
+      font-family: var(--font-secondary);
+      line-height: 2.65vw;
+      font-size: 2vw;
+    }
+  
+  /* @media only screen and (min-width: 768px) {
+    .space-filet{
+      min-width: 20em;
+    }
+  } */
+  
+  .space-filter__mot-cles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+  }
+  
+  .space-filter__btn-input-container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .space-filter__btn-input-container:hover .timbre__btn-input-text{
+    color: var(--color-tertiary)
+  }
+  
+  .space-filter__btn-input-wrapper{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    width: 12em;
+  }
+  
+  .space-filter__btn-input{
+    display: flex;
+    align-self: center;
+    border-radius: 5px;
+    background-color: var(--color-tertiary);
+    height: 1.5em;
+    justify-content: center;
+    width: 11em;
+  }
+  
+  .space-filter__btn-input-text{
+    align-self: center;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-primary-contrast);
+    height: 1.5em;
+    text-align: center;
+    width: 9em;
+  }
+  
+  .space-filter__btn-input-text::placeholder{
+    color: var(--color-primary-contrast);
+    text-align: center;
+  }
+  
+  .space-filter__btn-input-text:focus{
+    border: 0px solid #fff;
+  }
+  
+  .space-filter__btn-search-container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+  }
+  
+  .space-filter__btn-search-container:hover .space-filter__btn-search-text, .space-filter__btn-search{
+    color: var(--color-tertiary)
+  }
+  
+  .space-filter__btn-search-container:hover .space-filter__btn-search{
+    background-color: var(--color-primary);
+  }
+  
+  .space-filter__btn-search-wrapper{
+    /* align-self: center; */
+    border-radius: 10px;
+    /* margin-top: 0.5em; */
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    height: 2.75em;
+    /* margin-left: 1.5vw; */
+    width: 8em;
+  }
+  
+  .space-filter__btn-search{
+    display: flex;
+    align-self: center;
+    border-radius: 5px;
+    background-color: var(--color-tertiary);
+    height: 2em;
+    justify-content: center;
+    width: 7em;
+  }
+  
+  .space-filter__btn-search-text{
+    align-self: center;
+    color: var(--color-primary-contrast);
+  }
+  
+  .space-filter__category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .space-filter__category-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.4em;
+    width: 5.5em;
+  }
+  
+  .space-filter__category-nom{
+    color: var(--color-primary-contrast);
+    font: 1em;
+  }
+  
+  .space-filter__condition-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .space-filter__condition{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 6.5em;
+  }
+  
+  .space-filter__condition-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* min-height: 5em; */
+    width: 5.5em;
+  }
+  
+  .space-filter__condition-titre{
+    align-self: flex-start;
+    color: var(--color-primary);
+    font: 1em var(--font-secondary);
+  }
+  
+  .space-filter__category-container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  
+  .space-filter__condition-nom{
+    color: var(--color-primary-contrast);
+    font-size: 0.85em;
+  }
+  
+  
+  .space-filter__annees{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .space-filter__annees-container{
+    cursor: pointer;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+  }
+
+  .space-filter__annees > .space-filter__annees-container{
+    border: 1px solid var(--color-secondary);
+    margin-bottom: 1.5vw;
+  }
+  
+  
+  .space-filter__annees-wrapper{
+    align-self: center;
+    border-radius: 10px;
+    /* margin-top: 0.5em; */
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    
+    height: 2.25em;
+    /* margin-left: 1.5vw; */
+    width: 7em;
+  }
+  
+  .space-filter__annees-depart-fin{
+    display: flex;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 1.5em;
+    justify-content: center;
+    width: 6em;
+  }
+  
+  .space-filter__annees-text{
+    align-self: center;
+    border: none;
+    color: var(--color-primary-contrast);
+    height: 1.5em;
+    text-align: center;
+    width: 6em;
+  }
+  
+  .space-filter__annees-text::placeholder{
+    color: var(--color-primary-contrast);
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .space-filter__annees-text:focus{
+    border: 0px solid #fff;
+  }
+  

@@ -1,0 +1,92 @@
+/*-------------------------------------------------------------------*\
+  SETTINGS - Variables globales comme les polices et les couleurs
+\*-------------------------------------------------------------------*/
+
+@import "./1-settings/colors.css";
+@import "./1-settings/ease.css";
+@import "./1-settings/fonts.css";
+@import "./1-settings/z-index.css";
+@import "./1-settings/unite.css";
+@import "./1-settings/width.css";
+
+
+
+/*-------------------------------------------------------------------*\
+  TOOLS - Mixins et fonctions par défaut
+\*-------------------------------------------------------------------*/
+
+@import "./2-tools/mixins.css";
+
+
+/*-------------------------------------------------------------------*\
+  GENERIC - Styles de base (réinitialisation, box-sizing, etc.)
+\*-------------------------------------------------------------------*/
+
+@import "./3-generic/purify.css";
+
+
+/*-------------------------------------------------------------------*\
+  ELEMENTS - Éléments HTML
+\*-------------------------------------------------------------------*/
+
+@import "./4-elements/link.css";
+@import "./4-elements/list.css";
+@import "./4-elements/typography.css";
+@import "./4-elements/pseudo.css";
+
+
+/*-------------------------------------------------------------------*\
+  OBJECTS - Classes non décorées
+\*-------------------------------------------------------------------*/
+
+@import "./5-objects/grille.css";
+@import "./5-objects/wrapper.css";
+@import "./5-objects/section.css";
+
+/*-------------------------------------------------------------------*\
+  COMPONENTS
+\*-------------------------------------------------------------------*/
+
+@import "./6-components/bio.css";
+@import "./6-components/bouclier-securite.css";
+@import "./6-components/btns.css";
+@import "./6-components/carousel.css";
+@import "./6-components/certification.css";
+@import "./6-components/contact.css";
+@import "./6-components/coord.css";
+@import "./6-components/dropdown.css";
+@import "./6-components/fiche-timbre-carac.css";
+@import "./6-components/footer.css";
+@import "./6-components/logo.css";
+@import "./6-components/lord.css";
+@import "./6-components/philo.css";
+@import "./6-components/medaille.css";
+@import "./6-components/nav.css";
+@import "./6-components/recherche.css";
+@import "./6-components/slogan.css";
+@import "./6-components/social.css";
+@import "./6-components/space-filter.css";
+@import "./6-components/tuile-timbre.css";
+@import "./6-components/truck.css";
+@import "./6-components/valid.css";
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------*\
+  UTILITIES - Utilitaires et !important (peu)
+\*-------------------------------------------------------------------*/
+@import "./7-utilities/flex.css";
+@import "./7-utilities/bloc.css";
+@import "./7-utilities/grid.css";
+@import "./7-utilities/margin.css";
+@import "./7-utilities/padding.css";
+@import "./7-utilities/contour.css";
+@import "./7-utilities/try.css";
+

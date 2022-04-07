@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  logo / components
+\*------------------------------------*/
+
+.logo{
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo{
+    display: flex;
+    align-items: center;
+    width: 40vw;
+  }
+}
+
+.logo__link-img{
+  width: 6vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo__link-img {
+    width: 7vw;
+  }
+}
+
+.logo-footer{
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo-footer{
+    display: block;
+  }
+}
+
+.logo-footer__link-img {
+  height: 120px;
+}

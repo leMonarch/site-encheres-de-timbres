@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  button / components
+\*------------------------------------*/
+
+.btn-container{
+  width: fit-content;
+  cursor: pointer;
+
+}
+
+.btn-wrapper{
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  width: var(--big-relative-small);
+}
+
+.btn-container:hover .btn-text{
+  color: var(--color-secondary)
+}
+
+.btn{
+  display: flex;
+  align-self: center;
+  border-radius: 5px;
+  background-color: var(--color-tertiary);
+  height: 2em;
+  justify-content: center;
+  width: var(--medium-vw-large);
+}
+
+.btn-container:hover .btn{
+  background-color: var(--color-primary);
+}
+
+
+.btn-text{
+  align-self: center;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.btns-inputs{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.btns-inputs-left{
+  margin-left: 3vw;
+}

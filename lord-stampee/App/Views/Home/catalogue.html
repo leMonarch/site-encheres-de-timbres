@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% block div %}	
+		<section class="encheres">
+			<template>
+				<article class="timbre">
+					<div class="timbre__infos">
+						<div class="timbre__infos__img-wrapper">
+							<a href=""><img class="timbre__infos__img" src="{{image_lien}}" alt=""></a>
+							<div class="timbre__infos__date">
+								<div class="timbre__infos__date-wrapper">
+									<p class="timbre__infos__date-debut-fin">Début: {{enchere_date_debut}}</p>
+									<p class="timbre__infos__date-debut-fin">Fin: {{enchere_date_fin}}</p>
+								</div>
+							</div>
+							<div class="timbre__infos__count-down-container">
+								<div class="timbre__infos__count-down-wrapper">
+									<div class="timbre__infos__count-down-title">
+										<p>Temps Restant</p>
+									</div>
+									<div class="line">
+										<div class="timbre__infos__count-down-line">
+										</div>
+									</div>
+									
+									<div class="timbre__infos__count-down-chrono">
+										<p class="timbre__chrono">25j 12:00:58</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="timbre__infos-desc">
+							<h4>{{timbre_nom}}</h4>
+							<div class="line">
+								<div class="timbre__infos__desc-line">
+								</div>
+							</div>
+							<p class="timbre__infos-intro">{{timbre_description}}</p>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Départ: {{enchere_prix_plancher}} $</p>
+									<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >{{enchere_prix_actuel}} $</span></p>
+								
+										<p class="timbre__infos__mise-actuelle-depart">
+											{% if '{{gagnant_nom}}'|default %}
+												Mise actuelle de: {{gagnant_nom}}
+											{% else %}
+												Mise non encore éffectuée.
+											{% endif %}
+										</p>
+									
+								</div>
+							</div>
+							<div class="timbre__infos__mise-actuelle">
+								<div class="timbre__infos__mise-actuelle-wrapper">
+									<p class="timbre__infos__mise-actuelle-depart">Mis en ligne par: {{Users_user_firstname}}</p>
+								</div>
+							</div>
+							<form method="post" action="mise"  class="timbre__mise">
+								<div class="timbre__mise-input-wrapper">
+									<input class="timbre__mise-input" type="number" name="offre_mise_actuelle" value="" placeholder="Placer votre mise">
+								</div>
+								<div class="timbre__btn-miser-container">
+									<div class="timbre__btn-miser-wrapper">
+									
+										<div class="timbre__btn-miser">
+											<p class="timbre__btn-miser-text">
+												<input type="submit" value="Miser">
+											</p>
+										</div>
+									</div>
+								</div>
+								<input type="hidden" name="Users_user_firstname" value="{{ current_user.user_firstname }}">
+								<input type="hidden" name="user_id" value="{{ current_user.user_id }}">
+								<input type="hidden" name="enchere_id" value="{{enchere_id}}">
+							</form>
+							<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+						</div>	
+					</div>
+				</article>
+			</template>
+			<div>
+				<form method="post" action="rechercheavancee" class="space-filter" data-js-form-avance>
+					<div class="space-filter__mot-cles">
+						<h3 data-js-keyword-label>Mot-clé du timbre</h3>
+						<p>
+							<input class="space-filter__btn-input-text" name="keyword" placeholder="nom; pays; couleur" data-js-keyword value="">
+						</p>
+						<small>{{ message.keyword }}</small>
+					</div>
+					
+					<div class="space-filter__container">
+						<h3 data-js-categorie-label>Categorie</h3>
+						<div class="space-filter__category">
+							<div class="space-filter__category-wrapper">
+								<label class="space-filter__category-nom">Enchères  </label>
+								<input type="radio" id="radio1" name="enchere_categorie" value="Encheres" checked>
+							</div>
+							<div class="space-filter__category-wrapper">
+								<label class="space-filter__category-nom">Archives  </label>
+								<input type="radio" id="radio2" name="enchere_categorie" value="Archives">
+							</div>
+						</div>
+						<div class="space-filter__annees">
+							<h3>Prix actuel min</h3><p><small data-js-prix-min-value></small><span>$</span></p>
+							<p>
+								<input class="filter__range" name="enchere_prix_actuel_min" id="prixmin" type="range" min="{{ prixmin.prix_min }}" max="{{ prixmax.prix_max }}" value="{{ prixmin.prix_min }}" class="slider-min" data-js-prix-min>
+							</p>
+							<h3>Prix actuel max</h3><p><small data-js-prix-max-value></small><span>$</span></p>
+							<p>
+								<input class="filter__range" name="enchere_prix_actuel_max" type="range" min="{{ prixmin.prix_min }}" max="{{ prixmax.prix_max }}"  value="{{ prixmax.prix_max }}" class="slider-max" data-js-prix-max>
+							</p>
+						</div>
+						<small data-js-prix-label></small>
+						<small>{{ message.enchere_prix_actuel }}</small>
+
+						<div class="space-filter__annees">
+							<h3>Année de départ</h3><small data-js-annee-min-value></small>
+							<p>
+								<input class="filter__range" name="timbre_annee_min" type="range" min="1840" max="{{ "now"|date("Y") }}" value="1840" class="slider-min" data-js-annee-min>
+							</p>
+							<h3>Année de fin</h3><small data-js-annee-max-value></small>
+							<p>
+								<input class="filter__range" name="timbre_annee_max" type="range" min="1840" max="{{ "now"|date("Y") }}" value="{{ "now"|date("Y") }}" class="slider-max" data-js-annee-max>
+							</p>
+						</div>	
+						<small data-js-annee-label></small>	
+						<small>{{ message.timbre_annee }}</small>
+
+						<div class="space-container">
+							<div class="space">
+								<div class="space-filter__condition-container">
+									<div class="space-filter__condition">
+										<label class="space-filter__condition-titre">Condition:  </label>
+										<div class="space-filter__condition-wrapper">
+											
+											<div class="space-filter__category-wrapper">
+												<label class="space-filter__condition-nom">Menthe  </label>
+												<input type="checkbox" id="radio3" name="condition[]" value="Menthe" data-js-menthe-checkbox>
+											</div>
+											<div class="space-filter__category-wrapper">
+												<label class="space-filter__condition-nom">Utilisé  </label>
+												<input type="checkbox" id="radio3" name="condition[]" value="Utilisé" data-js-utilise-checkbox>
+											</div>
+											<div class="space-filter__category-wrapper">
+												<label class="space-filter__condition-nom">Inutilisé  </label>
+												<input type="checkbox" id="radio3" name="condition[]" value="Inutilisé" data-js-inutilise-checkbox>
+											</div>
+										</div>
+										
+									</div>
+									<small data-js-condition-label></small>	
+									<small>{{ message.condition }}</small>
+
+									<div class="space-filter__condition">
+										<label class="space-filter__condition-titre">Certification:  </label>
+										<div class="space-filter__condition-wrapper">
+											
+											<div class="space-filter__category-wrapper">
+												<label class="space-filter__condition-nom">Lord Stampee</label>
+												<input type="checkbox" id="radio3" name="certification[]" value="Lord Stampee" data-js-lord-checkbox>
+											</div>
+											<div class="space-filter__category-wrapper">
+												<label class="space-filter__condition-nom">Best Seller</label>
+												<input type="checkbox" id="radio3" name="certification[]" value="Best Seller" data-js-best-checkbox>
+											</div>
+										</div>	
+									</div>
+									<small data-js-certification-label></small>	
+									<small>{{ message.certification }}</small>
+									
+								</div>
+							</div>
+						</div>
+						<div class="space-filter__btn-search-container">
+							<div class="space-filter__btn-search-wrapper">
+							
+								<div class="space-filter__btn-search">
+									<p class="space-filter__btn-search-text">
+										<i class="fas fa-search"></i> <input type="submit" value="Rechercher" data-js-btn>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<main>
+					
+					<div class="grille grid" data-js-swap>
+						{% for timbre in timbres %}
+							{% if timbre.Users_user_firstname != current_user.user_firstname  %}
+							<article class="timbre">
+								<div class="timbre__infos">
+									<div class="timbre__infos__img-wrapper">
+										<a href=""><img class="timbre__infos__img" src="{{ timbre.image_lien }}" alt=""></a>
+										<div class="timbre__infos__date">
+											<div class="timbre__infos__date-wrapper">
+												<p class="timbre__infos__date-debut-fin">Début: {{ timbre.enchere_date_debut }}</p>
+												<p class="timbre__infos__date-debut-fin">Fin: {{ timbre.enchere_date_fin }}</p>
+											</div>
+										</div>
+										<div class="timbre__infos__count-down-container">
+											<div class="timbre__infos__count-down-wrapper">
+												<div class="timbre__infos__count-down-title">
+													<p>Temps Restant</p>
+												</div>
+												<div class="line">
+													<div class="timbre__infos__count-down-line">
+													</div>
+												</div>
+												
+												<div class="timbre__infos__count-down-chrono">
+													<p class="timbre__chrono">25j 12:00:58</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="timbre__infos-desc">
+										<h4>{{ timbre.timbre_nom }}</h4>
+										<div class="line">
+											<div class="timbre__infos__desc-line">
+											</div>
+										</div>
+										<p class="timbre__infos-intro">{{ timbre.timbre_description }}</p>
+										<div class="timbre__infos__mise-actuelle">
+											<div class="timbre__infos__mise-actuelle-wrapper">
+												<p class="timbre__infos__mise-actuelle-depart">Départ: {{ timbre.enchere_prix_plancher }} $</p>
+												<p class="timbre__infos__mise-actuelle-courante">Actuelle: <span >{{ timbre.enchere_prix_actuel }} $</span></p>
+											
+													<p class="timbre__infos__mise-actuelle-depart">
+														{% if timbre.gagnant_nom %}
+															Mise actuelle de: {{ timbre.gagnant_nom }}
+														{% else %}
+															Mise non encore éffectuée.
+														{% endif %}
+													</p>
+												
+											</div>
+										</div>
+										<div class="timbre__infos__mise-actuelle">
+											<div class="timbre__infos__mise-actuelle-wrapper">
+												<p class="timbre__infos__mise-actuelle-depart">Mis en ligne par: {{ timbre.Users_user_firstname }}</p>
+											</div>
+										</div>
+										<form method="post" action="mise"  class="timbre__mise">
+											<div class="timbre__mise-input-wrapper">
+												<input class="timbre__mise-input" type="number" name="offre_mise_actuelle" value="" placeholder="Placer votre mise">
+											</div>
+											<div class="timbre__btn-miser-container">
+												<div class="timbre__btn-miser-wrapper">
+												
+													<div class="timbre__btn-miser">
+														<p class="timbre__btn-miser-text">
+															<input type="submit" value="Miser">
+														</p>
+													</div>
+												</div>
+											</div>
+											<input type="hidden" name="Users_user_firstname" value="{{ current_user.user_firstname }}">
+											<input type="hidden" name="user_id" value="{{ current_user.user_id }}">
+											<input type="hidden" name="enchere_id" value="{{ timbre.enchere_id }}">
+										</form>
+										<a class="timbre__infos-fiche" href="">(Voir la fiche)</a>
+									</div>	
+								</div>
+							</article>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</main>
+			</div>
+		</section>
+{% endblock %}

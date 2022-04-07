@@ -1,0 +1,44 @@
+/*Contour des blocs*/
+.ligne-contour-cercle{
+    border: 2px solid var(--light-grey);
+    border-radius: 50%;
+}
+
+.ligne-contour--round-2pt5{
+    border: 1px solid var(--dark-grey);
+    border-radius: 2.5%;
+}
+
+.ligne-contour--round-15{
+    border: 1px solid var(--dark-grey);
+    border-radius: 15px;
+}
+
+.whiteligne-contour--round-2pt5{
+    border: 1px solid #FFF;
+    border-radius: 2.5%;
+}
+
+.ligne-contour--outline-carre{
+    outline: 1px solid var(--colo-red);
+}
+
+.ligne-contour--red-outline-carre{
+    outline: 1px solid var(--color-dark-primary);
+}
+
+.ligne-top--carre{
+    border-top: 1px solid var(--dark-grey);
+}
+
+.ligne-bottom--carre{
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.ligne-top--carre-10{
+    border-top: 10px solid var(--dark-grey);
+}
+
+.ligne-bottom--carre-10{
+    border-bottom: 10px solid var(--dark-grey);
+}

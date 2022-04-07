@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  width / settings
+\*------------------------------------*/
+
+
+:root{
+    --width-normal-1: 10vw;
+    --width-normal-2: 12vw;
+    --width-medium: 25vw;
+    --width-large: 40vw;
+}

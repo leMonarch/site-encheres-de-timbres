@@ -1,0 +1,212 @@
+/**nav component */
+
+
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1.7em 3em; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--color-primary) ;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .header{
+        
+        padding: 0.7em 3em 0 3em;
+        
+      
+    }
+
+}
+
+
+.nav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+	background-color: var(--color-primary);
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav{
+        flex-direction: column;
+        justify-content: none;
+    }
+}
+
+.nav__icons{
+    display: flex;
+    height: 3vw;
+    justify-content: flex-end;
+}
+
+.nav__icons-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav__icons-item{
+    display: flex;
+        align-items: flex-end;
+        font-size: 1vw;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .nav__icons-link{
+        
+        font-size: 1.4em;
+    
+    }
+}
+
+
+.nav__icons-link{
+    color: var(--color-secondary);
+        height: 3vw;
+        padding: 0 0 0 1.6vw;
+    font-size: 1rem;
+}
+
+
+.nav__icons-link:hover{
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}   
+
+
+.nav__item{
+    display: flex;
+    align-items: center;
+    height: 3vw;
+    padding: 0 5.5vw 0 0;
+}
+
+.nav__item-link{
+    
+    color: var(--color-tertiary);
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav__item{
+        padding: 0 0 0 5.5vw;
+        align-items: flex-start;
+    }
+    .nav__item-link{
+        font-size: 1.2rem;
+    }
+}
+
+
+
+.nav__item-link:hover{
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.enchere-active{
+  border-bottom: 2px solid var(--color-tertiary);
+}
+
+.nav__item-link-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.under-1024-nav{
+    display: none;
+}
+
+/* Transformer la case à cocher en pseudo-bouton */
+.show-menu>input[type="checkbox"] {
+    display: inline-block;
+    margin: 1.3em 140px 30px 0;
+    appearance: none;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+}
+
+.show-menu>input[type="checkbox"]:before {
+    content: "Fermer le menu";
+    color: var(--color-primary-contrast);
+    padding: 10px;
+}
+
+.show-menu>input[type="checkbox"]:not(:checked):before {
+    content: "Ouvrir le menu";  
+    color: var(--color-secondary);
+
+}
+
+/* Menu complet */
+.show-menu {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Conteneur déroulant */
+.show-menu>div {
+    position: fixed;
+
+    padding: 20px;
+    background-color: var(--color-tertiary);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 200ms ease-in-out;
+    transition-property: opacity, transform;
+}
+
+.show-menu a {
+    display: block;
+    font-size: 5em;
+    color: var(--color-primary);
+}
+
+
+/* Masquer et inactiver le menu 
+    * lorsque la case à cocher n'est pas cochée */
+.show-menu>input[type="checkbox"]:not(:checked)+div {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.95);
+}
+
+.nav__list{
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+
+    .nav__list {
+        display: flex;
+        justify-content: flex-end;
+        height: 3vw;
+    } 
+    .show-menu{
+        display: none;
+    }
+    .under-1024-nav{
+        display: block;
+    }
+}
+		

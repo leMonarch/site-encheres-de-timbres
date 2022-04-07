@@ -1,0 +1,125 @@
+/*------------------------------------*\
+  search / components
+\*------------------------------------*/
+.search__horizontal{
+    display: flex;
+    transform: scale(0.9);
+}
+
+.search__title-section{
+    padding: 2vw;
+}
+
+.search__primary-title{
+    font-size: var(--font-size-default-medium);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.search__secondary-title{
+    font-size: var(--font-size-default-small);
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1.35vw 0 0 0;
+}
+
+.search__small-fieldset, .search__small-title-section{
+    border: 1px solid var(--color-tertiary);
+    border-radius: 15px;
+    background-color: var(--color-mid-dark-secondary);
+    width: 50vw;
+    display: none;
+    margin: auto;
+}
+
+.search__fieldset{
+    border: 1px solid var(--color-tertiary);
+    border-radius: 15px;
+    background-color: var(--color-mid-dark-secondary);
+    box-shadow: 0.8vw 1.48vw var(--color-dark-secondary);
+    width: 50vw;
+    display: flex;
+    margin: auto;
+}
+
+.search__form{
+    display: flex;
+    justify-content: center;
+    height: 7vw;
+    width: 50vw;
+}
+
+.search__select{
+    padding: 1.5vw;
+    border-radius: 5px;
+    margin: 1vw;
+    color: black;
+    height: 5vw;
+    width: 10vw;
+    font-size: 1.8vw;
+    border: 1px solid yellow;
+}
+
+.search__option{
+    color: var(--color-primary);
+}
+
+.search__input{
+    border: 1px solid yellow;
+    border-radius: 5px;
+    color: black;
+    font-size: 1.5vw;
+    height: 5vw;
+    margin: 1vw;
+    padding: 1.5vw;
+    width: 24vw;   
+}
+
+.search__btn{
+    border: 1px solid yellow;
+    border-radius: 5px;
+    color: black;
+    font-size: 2vw;
+    height: 5vw;
+    margin: 1vw;
+    padding: 1.5vw;
+    width: 10vw;
+}
+
+.search-box {
+    padding: 1.5vw;
+    font-size: large;
+    border-radius: 5px;
+    margin: 1vw;
+    color: black;
+}
+
+::placeholder{
+    height: 5vw;
+    width: 24vw;
+    font-size: 2.1vw;
+    color: var(--color-black);
+}
+
+@media only screen and (min-width: 550px) {
+
+    .search__horizontal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .search__primary-title{
+        font-size: var(--font-size-primary);
+        color: var(--color-primary);
+        text-align: center;
+    }
+    
+    .search__secondary-title{
+        font-size: var(--font-size-secondary);
+        color: var(--color-primary);
+        text-align: center;
+        margin: 1.35vw 0 0 0;
+    }
+    
+  }

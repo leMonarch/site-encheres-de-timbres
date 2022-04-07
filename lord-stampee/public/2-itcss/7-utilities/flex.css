@@ -1,0 +1,61 @@
+/*flex utility*/
+/* .flex{
+    display:flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.flex--row{
+    flex-direction: row;
+}
+
+.flex--column{
+    flex-direction: column;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+
+.flex--justify-center-x{
+    justify-content: center;
+}
+
+.flex--space-between{
+    justify-content: space-between;
+}
+
+.flex--space-around{
+    justify-content: space-around;
+}
+
+.flex--space-evenly{
+    justify-content: space-evenly;
+}
+
+.flex--items-center-y{
+    align-items: center;
+}
+
+.flex--appliedOnSelfChild-center-y{
+    align-self: center;
+}
+
+.text-image:nth-child(odd){
+    flex-direction: row-reverse;   
+}
+
+.text-image:nth-child(even) {
+    flex-direction: row;
+} */

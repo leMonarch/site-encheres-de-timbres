@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block div %}	
+	{% for timbre in timbres %}	
+		<section class="section-fiche">
+			<form method="post" enctype="multipart/form-data" action="delete" class="votre-fiche">
+				<div class="section-title-fiche">
+					<h2>Fiche</h2>
+					
+				</div>
+				<div class="btns-inputs-left">
+					<div>
+						<input type="submit" value="Supprimer">
+					</div>
+				</div>
+				<div class="timbre__infos">
+					<div class="fiche-timbre__infos__img-wrapper">
+						<h4>{{ timbre.timbre_nom }}</h4>
+						<div class="line">
+							<div class="timbre__infos__desc-line">
+							</div>
+						</div>
+						
+						<div class="fiche-timbre-img">
+							
+							<div class="fiche-img-wrapper">
+								
+								<img class="fiche-timbre__img" src="{{ timbre.image_lien }}" alt="">
+								
+							</div>
+						</div>
+						
+						<div class="timbre__infos__date">
+							<div class="timbre__infos__date-wrapper">
+								<p class="fiche-timbre__infos__date-debut-fin">Début: {{ timbre.enchere_date_debut }}</p>
+								<p class="fiche-timbre__infos__date-debut-fin">Fin: {{ timbre.enchere_date_fin }}</p>
+							</div>
+						</div>
+						<div class="timbre__infos__count-down-container">
+							<div class="timbre__infos__count-down-wrapper">
+								<div class="fiche-timbre__infos__count-down-title">
+									<p>Temps Restant</p>
+								</div>
+								<div class="line">
+									<div class="timbre__infos__count-down-line">
+									</div>
+								</div>
+								
+								<div class="timbre__infos__count-down-chrono">
+									<p class="fiche-timbre__chrono">25j 12:00:58</p>
+								</div>
+								<div class="timbre__infos__mise-actuelle">
+									<div class="timbre__infos__mise-actuelle-wrapper">
+										<p class="fiche-timbre__infos__mise-actuelle-depart">Départ: {{ timbre.enchere_prix_plancher }} $</p>
+										<p class="fiche-timbre__infos__mise-actuelle-courante">Actuelle: <span >{{ timbre.enchere_prix_actuel }} $</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fiche-timbre__infos-desc">
+						<div class="fiche-timbre">
+							<div class="fiche-timbre-carac">
+								<div class="fiche-timbre-carac__colonne-gauche">
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Provenance: </p>
+											<p class="carac__desc">{{ timbre.pays_nom }}</p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Condition: </p>
+											<p class="carac__desc">{{ timbre.condition_nom }}</p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Année: </p>
+											<p class="carac__desc">{{ timbre.timbre_annee }}</p>
+										</div>
+									</div>
+								</div>
+								<div class="fiche-timbre-carac__colonne-droite">
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Type: </p>
+											<p class="carac__desc">{{ timbre.timbre_type }}</p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Dimension: </p>
+											<p class="carac__desc">{{ timbre.timbre_dimensions }}</p>
+										</div>
+									</div>
+									<div class="fiche-timbre-carac__container">
+										<div class="carac">
+											<p class="carac__name">Couleur: </p>
+											<p class="carac__desc">{{ timbre.timbre_couleur }}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fiche-timbre-carac__container">
+								<div class="carac">
+									<p class="carac__name">Certificat: </p>
+									<p class="carac__desc">{{ timbre.certification_nom }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="fiche-timbre-img__title-container">
+							<p class="fiche-timbre-img__desc-title">Description</p>
+						</div>
+						<div class="fiche-line">
+							<div class="fiche-timbre__infos__desc-line"></div>
+						</div>
+						<div class="fiche-timbre-img">
+							
+							<!-- <div class="fiche-bloc-wrapper"> -->
+										<p class="fiche-mise__desc">
+											{{ timbre.timbre_description }}
+										</p>
+										
+							<!-- </div> -->
+						</div>
+					</div>	
+				</div>
+			
+			
+				<input type="hidden" name="image_id" value="{{ timbre.image_id }}">
+				<input type="hidden" name="pays_id" value="{{ timbre.pays_id }}">
+				<input type="hidden" name="condition_id" value="{{ timbre.condition_id }}">
+				<input type="hidden" name="certification_id" value="{{ timbre.certification_id }}">
+				<input type="hidden" name="enchere_id" value="{{ timbre.enchere_id }}">
+				<input type="hidden" name="timbre_id" value="{{ timbre.timbre_id }}">
+
+				
+				
+			</form>
+		</section>
+	{% endfor %}
+
+{% endblock %}

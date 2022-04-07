@@ -1,0 +1,48 @@
+/**coord component*/
+
+.coord{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 410px;
+  }
+
+  .coord-inc-wrapper{
+    display: none;
+  }
+
+@media only screen and (min-width: 768px) {
+  .coord-inc-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: var(--micro-relative-normal);
+  }
+
+}
+
+  
+.coord__inc{
+color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-size: 10px;
+  letter-spacing: 0.1vw;
+}
+
+.coord__nom-du-lord{
+color: var(--color-tertiary);
+  font-weight: 520;
+  font-family: var(--font-secondary);
+  line-height: 30px;
+  font-size: 1.5rem;
+}
+
+.coord__details{
+    font-size: 0.6vw;
+    margin-left: 1vw;
+  }  
+.coord__text-address{
+color: var(--color-secondary);
+  font-size: 13px;
+  line-height: 1.15;
+}

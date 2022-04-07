@@ -1,0 +1,43 @@
+/*Variables d'unité fréquemment utilisées*/
+
+:root {
+
+    --micro-px-extra-small: 0.1px;
+    --micro-px-small: 0.5px;
+    --micro-px-bigger: 2px;
+    --micro-px-biggest: 3px;
+
+
+    --big-px-normal-1: 10px;
+    --big-px-normal-2: 15px;
+
+    --micro-relative-small: 0.5vw;
+    --micro-relative-normal: 1vw;
+    --micro-relative-normal-2: 1.1vw;
+    --micro-relative-bigger: 1.5vw;
+    --micro-relative-bigger-2: 1.7vw;
+    --micro-relative-biggest: 2vw;
+
+    --medium-vw-small: 3vw;
+    --medium-vw-normal: 6vw;
+    --medium-vw-large: 8vw;
+
+
+    --big-relative-small: 9vw;
+    --big-relative-normal-1: 10vw;
+    --big-relative-normal-2: 12vw;
+    --big-relative-medium: 25vw;
+    --big-relative-large: 40vw;
+
+    --micro-em-small: 0.5em;
+    --micro-em-under-normal: 0.8em;
+    --micro-em-normal: 1em;
+    --micro-em-over-normal: 1.5em;
+    --micro-em-bigger: 2.25em;
+    --micro-em-biggest: 3em;
+
+    --big-relative-normal-1-ratio: 30vw;
+    --big-relative-medium-ratio: 75vw;
+
+}
+

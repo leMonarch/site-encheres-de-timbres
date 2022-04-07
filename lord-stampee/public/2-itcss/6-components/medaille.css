@@ -1,0 +1,26 @@
+
+.medaille-satisfaction{
+    border-radius: var(--big-px-normal-2);
+    padding: var(--micro-relative-normal);
+}
+
+.medaille-satisfaction:hover{
+    outline: var(--micro-px-bigger) solid var(--color-primary);
+}
+
+
+.medaille-title{
+    color: var(--color-primary);
+    font-size: 1em;
+}
+
+.fa-medal{
+    color: var(--color-primary-contrast);
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+    .fa-medal{
+        font-size: 3vw;
+    }
+}

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  coord / components
+\*------------------------------------*/
+
+.contact{
+ display: flex;
+ flex-direction: column;
+}
+
+.contact-title{
+    font-family: var(--font-secondary);
+    font-size: 1.2vw;
+}
+
+.contact-list{
+    padding-left: 1vw;
+}
+
+.contact-list__item{
+    font-size: 1vw;
+}
+
+.contact-bullet{
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 3%;
+    border-radius: 50%;
+    outline: 1px solid #fff;
+    /* height: 3vw; */
+}
+

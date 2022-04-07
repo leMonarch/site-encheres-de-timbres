@@ -1,0 +1,32 @@
+
+.truck-delivery{
+    border-radius: var(--big-px-normal-2);
+    padding: var(--micro-relative-normal);
+    
+}
+
+.truck-delivery:hover{
+    outline: var(--micro-px-bigger) solid var(--color-primary);
+}
+
+.truck-title{
+    color: var(--color-primary);
+    font-size: 1em;
+}
+
+
+.fa-truck{
+    color: var(--color-primary-contrast);
+    font-size: 2em;
+    z-index: 30;
+}
+
+@media only screen and (min-width: 768px) {
+    .fa-truck{
+        font-size: 3vw;
+    }
+}
+
+
+
+

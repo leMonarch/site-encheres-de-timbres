@@ -1,0 +1,140 @@
+/*------------------------------------*\
+  distance-section / objects
+\*------------------------------------*/
+
+.section {
+    margin-top: 4vw;
+  }
+
+
+.section-title-fiche{
+    font-size: 1.1em;
+    color:var(--color-primary);
+    margin: 1vw 0 2vw 1.5vw;
+  }
+
+.section-title{
+  font-size: 1.1em;
+  color:var(--color-primary);
+  margin: 2vw 0 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .section-title{
+    font-size: 1.7vw;
+  }
+
+  .section-title-fiche{
+    font-size: 1.7vw;
+  }
+
+}
+
+.encheres > div {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+} 
+
+.encheres{
+  margin: 3vw 0;
+} 
+
+.section-accueil{
+  display: none;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vw 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+}
+
+.section-fiche{
+  margin: 3vw 0;
+}
+
+.section-lord-certification{
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-lord-certification{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.section-footer{
+  background-color: var(--color-primary);
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.section-1-remplace{
+  display: none;
+}
+
+@media only screen and (min-width: 625px) {
+  .section-1-remplace{
+    display:block;
+    margin: 2vw 0;
+  }
+}
+
+.section-1-remplace .certification{
+  display: none;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .section-1-remplace .certification{
+    align-items: center;
+    display: flex;
+    padding: 2vw 0;
+    justify-content: space-between;
+  }
+  
+  .section-1-remplace > .certification > div{
+    margin-bottom: 1vw;
+    padding: 4vw 0;
+    width: 11em;
+  }
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .section-1-remplace{
+    display: none;
+  }
+}
+
+.section-bio{
+  display: none;
+}
+
+
+@media only screen and (min-width: 1345px) {
+  .section-bio{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vw 0 4vw 0;
+
+}
+}

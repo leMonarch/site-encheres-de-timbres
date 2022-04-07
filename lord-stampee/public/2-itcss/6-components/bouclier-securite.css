@@ -1,0 +1,40 @@
+
+.bouclier-securite{
+    border-radius: var(--big-px-normal-2);
+    padding: var(--micro-relative-normal);
+    border: var(--micro-px-bigger) solid var(--color-primary);
+}
+
+.bouclier-securite:hover{
+    background-color: #fff;
+    color: var(--color-primary);
+    border: var(--micro-px-bigger) solid var(--color-secondary);
+
+}
+
+.badge-title{
+    color: var(--color-primary);
+    font-size: 1em;
+}
+
+.bouclier-securite:hover .badge-title{
+    color: var(--color-primary-contrast);
+}
+
+.fa-shield-alt{
+    color: var(--color-primary-contrast);
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+    .fa-shield-alt{
+        font-size: 3vw;
+    }
+}
+
+.bouclier-securite:hover .fa-shield-alt{
+    color: var(--color-primary);
+}
+
+
+

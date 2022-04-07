@@ -1,0 +1,19 @@
+
+.bio__description{
+
+    color: var(--color-primary);
+    background-color: white;
+    border: 2px solid var(--color-secondary);
+    border-radius: 15px;
+    line-height: 1.5;
+    width: 70%;
+    padding: 2vw;
+    column-count: 2;
+}
+
+.bio__title{
+    color: var(--color-primary-contrast);
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+    width: 70%;
+}

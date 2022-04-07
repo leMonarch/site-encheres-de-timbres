@@ -1,0 +1,39 @@
+/**contact component*/
+
+.contact{
+	display: flex;
+	flex-direction: column;
+   }
+   
+   .contact-title{
+	   color: var(--color-tertiary);
+	   font-family: var(--font-secondary);
+	   font-size: 1.2em;
+	   line-height: 2.1;
+   }
+   
+   .contact-list{
+	   padding-left: 1vw;
+   }
+   
+   .contact-list__item{
+	   color: var(--color-secondary);
+	   display: flex;
+	   align-items: center;
+	   font-size: 1em;
+	   line-height: 1.75vw;
+	   width: 150px;
+   }
+   
+   .contact-bullet{
+	   display: inline-block;
+	   width: 3%;
+	   padding-bottom: 3%;
+	   border-radius: 50%;
+	   outline: 1px solid #fff;
+	   margin-right: 0.35vw;
+   }
+
+   .contact-list-extra > li{
+	line-height: 2.5vw;
+   }

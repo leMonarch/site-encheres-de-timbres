@@ -1,0 +1,98 @@
+/* Bloc width*/
+
+.bloc-10{
+    width: 10%;
+}
+
+.bloc-17{
+    width: 17%;
+}
+
+.bloc-20{
+    width: 20%;
+}
+
+.bloc-25{
+    width: 25%;
+}
+
+.bloc-30{
+    width: 30%;
+}
+
+.bloc-tier{
+    width: 33.3%; 
+}
+
+.bloc-40{
+    width: 40%;
+}
+
+.bloc-49{
+    width: 49%;
+}
+
+.bloc-50{
+    width: 50%;
+}
+
+.bloc-60{
+    width: 60%;
+}
+
+.bloc-deux-tiers{
+    width: 66.6%;
+}
+
+.bloc-75{
+    width: 75%;
+}
+
+.bloc-100{
+    width: 100%;
+}
+
+/*ligne contour de bloc*/
+
+.ligne-contour-cercle{
+    border: 2px solid var(--light-grey);
+    border-radius: 50%;
+}
+
+.ligne-contour--round-2pt5{
+    border: 1px solid var(--dark-grey);
+    border-radius: 2.5%;
+}
+
+.whiteligne-contour--round-2pt5{
+    border: 1px solid #FFF;
+    border-radius: 2.5%;
+}
+
+.ligne-contour--outline-carre{
+    outline: 1px solid var(--colo-red);
+}
+
+.ligne-top--carre{
+    border-top: 1px solid var(--dark-grey);
+}
+
+.ligne-bottom--carre{
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.ligne-top--carre-10{
+    border-top: 10px solid var(--dark-grey);
+}
+
+.ligne-bottom--carre-10{
+    border-bottom: 10px solid var(--dark-grey);
+}
+
+/* Img & Video relatif */
+.bloc--relative {
+    position: relative;
+}
+.bloc--absolute {
+    position: absolute;
+}

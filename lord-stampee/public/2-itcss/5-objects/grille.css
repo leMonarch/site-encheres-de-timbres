@@ -1,0 +1,16 @@
+/*generic*/
+
+.grille {
+	gap: var(--gutter);
+}
+
+
+.grille.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+}
+
+.grille.list{
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50em, 1fr));
+}

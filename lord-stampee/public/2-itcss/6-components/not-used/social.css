@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  social / components
+\*------------------------------------*/
+
+.social{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 0;
+    width: 45%;
+  }
+  
+  .social__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    font-size: 2.5vw;
+  }
+  
+  .social__text{
+    font-size: 2.5vw;
+    color: var(--color-secondary);
+    text-align: center;
+  }
+  
+  .social__text:hover{
+    color: var(--color-secondary);
+  }
+  
+  .social__text + .social__text{
+    margin-top: 1vw;
+  }
+
+
+
